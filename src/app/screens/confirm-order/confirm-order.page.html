@@ -1,0 +1,72 @@
+
+<ion-content>
+  <div class="header">
+    <ion-buttons>
+      <ion-button routerLink="/home/cart">
+        <ion-icon slot="icon-only" color='light' name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </div>
+
+  <!-- CONFIRM ORDER CARD -->
+  <div class="card">
+    <!-- <div class="image">
+      <ion-img [src]="food.image"></ion-img>
+    </div> -->
+
+    <div class="card-content">
+      <div class="card-title">
+        <h1 class="ion-no-margin">Order Details</h1>
+        <!-- <p class="ion-no-margin"><sup>₱</sup> {{food.price | number: '1.2'}}</p> -->
+      </div>
+    </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label slot="start">Your order Number</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label slot="start">Your order from</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label slot="start">Delivery Address</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ion-list class="orders">
+      <ion-item>
+        <ion-label slot="start">1x Celery Kunwari</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label slot="start">2x Bangus Kunwari</ion-label>
+      </ion-item>
+    </ion-list>
+
+
+    
+
+    <div class="subtotal">
+      <ion-list >
+        <ion-list-header>
+          <h1>Subtotal</h1>
+          <ion-label slot="end">
+            <p class="ion-no-margin"><sup>₱</sup> 168.00 </p>
+          </ion-label>
+        </ion-list-header>
+        
+        <ion-item>
+          <ion-label slot="start">Delivery fee</ion-label>
+          <ion-label slot="end">
+            <p class="ion-no-margin"><sup>₱</sup> 34.00 </p>
+          </ion-label>
+        </ion-item>
+  
+        <ion-label slot="end">
+          <p class="ion-no-margin"><sup>₱</sup> 34.00 </p>
+        </ion-label>
+      </ion-list>
+    </div>
+
+    <shop-app-button>Confirm Order</shop-app-button>
+  </div>
+</ion-content>

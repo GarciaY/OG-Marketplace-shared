@@ -47,6 +47,24 @@ const routes: Routes = [
     path: 'change-email',
     loadChildren: () => import('./screens/edit-profile/change-email/change-email.module').then( m => m.ChangeEmailPageModule)
   },
+  {
+    path: 'change-password',
+    loadChildren: () => import('./screens/edit-profile/change-password/change-password.module').then( m => m.ChangePasswordPageModule)
+  },
+  {
+    path: 'change-phone-number',
+    loadChildren: () => import('./screens/edit-profile/change-phone-number/change-phone-number.module').then( m => m.ChangePhoneNumberPageModule)
+  },
+  {
+    path: 'change-address',
+    loadChildren: () => import('./screens/edit-profile/change-address/change-address.module').then( m => m.ChangeAddressPageModule)
+  },
+  {
+    path: 'confirm-order',
+    loadChildren: () => import('./screens/confirm-order/confirm-order.module').then( m => m.ConfirmOrderPageModule)
+  },
+  
+  
   
 
   // {

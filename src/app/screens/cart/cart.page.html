@@ -25,6 +25,6 @@
   <shop-app-button *ngIf="(cartItems$|async).length">
     Total: <span><sup>₱</sup>{{totalAmount$|async|number:'1.2'}}</span>
   </shop-app-button>
-  <shop-app-button *ngIf="(cartItems$|async).length">Checkout</shop-app-button>
+  <shop-app-button routerLink="/confirm-order">Checkout</shop-app-button> <!--*ngIf="(cartItems$|async).length"-->
    
 </ion-content>

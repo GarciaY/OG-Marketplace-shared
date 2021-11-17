@@ -7,11 +7,11 @@ import { ButtonComponent } from './button/button.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
 
 import { ShopButtonComponent } from './shop-button/shop-button.component';
-
+import { BackButtonComponent } from './back-button/back-button.component'; 
 
 @NgModule({
-  declarations: [InputComponent, ButtonComponent, IconButtonComponent, ShopButtonComponent],
+  declarations: [InputComponent, ButtonComponent, IconButtonComponent, ShopButtonComponent, BackButtonComponent],
   imports: [CommonModule, IonicModule],
-  exports: [InputComponent, ButtonComponent, IconButtonComponent, ShopButtonComponent],
+  exports: [InputComponent, ButtonComponent, IconButtonComponent, ShopButtonComponent, BackButtonComponent],
 })
 export class SharedModule {}

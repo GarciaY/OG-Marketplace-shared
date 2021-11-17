@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { UserProfilePageRoutingModule } from './user-profile-routing.module';
+import { ConfirmOrderPageRoutingModule } from './confirm-order-routing.module';
 
-import { UserProfilePage } from './user-profile.page';
+import { ConfirmOrderPage } from './confirm-order.page';
 import { SharedModule } from 'src/app/components/shared.module';
 
 @NgModule({
@@ -14,9 +14,10 @@ import { SharedModule } from 'src/app/components/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    UserProfilePageRoutingModule,
-    SharedModule
+    ConfirmOrderPageRoutingModule,
+    SharedModule,
+    
   ],
-  declarations: [UserProfilePage]
+  declarations: [ConfirmOrderPage]
 })
-export class UserProfilePageModule {}
+export class ConfirmOrderPageModule {}
