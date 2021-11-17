@@ -9,6 +9,7 @@ export class TransacCardComponent implements OnInit {
 
   constructor() { }
 
+ 
   ngOnInit() {}
 
 }
