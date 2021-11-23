@@ -7,6 +7,14 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <div class="content-margin">
 
+    
+
+    <ion-list inset> 
+      <ion-list-header><h1>Your Current Address:</h1></ion-list-header> 
+      <ion-item><p>Barangay sample</p></ion-item> 
+      <ion-item><p>Street sample</p></ion-item> 
+    </ion-list> 
+
     <ion-item>
       <ion-label>Barangay</ion-label>
        <ion-select  [(ngModel)]="barangay" [ngModelOptions]="{standalone: true}" (ionChange)="selectedBarangay($event)"> 

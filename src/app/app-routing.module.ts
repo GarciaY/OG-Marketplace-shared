@@ -63,6 +63,10 @@ const routes: Routes = [
     path: 'confirm-order',
     loadChildren: () => import('./screens/confirm-order/confirm-order.module').then( m => m.ConfirmOrderPageModule)
   },
+  {
+    path: 'view-transac',
+    loadChildren: () => import('./screens/view-transac/view-transac.module').then( m => m.ViewTransacPageModule)
+  },
   
   
   

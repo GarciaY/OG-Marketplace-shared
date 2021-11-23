@@ -1,6 +1,9 @@
 <ion-content class="ion-padding">
-  <h1 class="ion-center">Welcome to Olongapo Market Place</h1>
+  <img src="assets/images/OG-Market-place.png">
+
   <h1>Welcome,</h1>
+
+  
   <h3>Sign in to continue!</h3>
 
   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
@@ -24,7 +27,7 @@
 
     <form-app-button label = 'Login' routerLink="/home/listing"></form-app-button>
    
-    <app-icon-button icon='logo-facebook' label='Connect with Facebook'></app-icon-button>
+    <!-- <app-icon-button icon='logo-facebook' label='Connect with Facebook'></app-icon-button> -->
   </form>
 
   <p class="footer-text">I'm a new user, <a routerLink="/register">Sign Up</a></p>

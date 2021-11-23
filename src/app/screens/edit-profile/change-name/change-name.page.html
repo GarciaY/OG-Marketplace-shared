@@ -6,6 +6,11 @@
   <br>
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <div class="content-margin">
+    
+    <h1>Your Current User Name:</h1>
+    
+    <ion-label><p>Full name label</p></ion-label> <!--Dynamic user input typescript-->
+    
     <app-input label="New User Full Name"  inputmode="text" formControlName="fullname" ngDefaultControl></app-input>
     <!--ErrorMessage.Fullname-->
     <div *ngFor="let error of errorMessages.fullname">

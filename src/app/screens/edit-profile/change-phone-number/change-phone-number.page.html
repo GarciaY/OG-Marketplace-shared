@@ -7,6 +7,11 @@
   <br>
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <div class="content-margin">
+    
+    <h1>Your Current Phone Number:</h1>
+    
+    <ion-label><p>092424235253</p></ion-label> <!--Dynamic user input typescript-->
+
     <app-input label="New Contact Number"  inputmode="tel" formControlName="contactNumber" ngDefaultControl></app-input>
     
      <!--ErrorMessage.contactNumber-->
