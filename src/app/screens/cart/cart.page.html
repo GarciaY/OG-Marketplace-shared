@@ -1,12 +1,15 @@
 <ion-content>
-  <h3 class="title" *ngIf="(cartItems$|async).length">{{(cartItems$|async).length}} towards at cart</h3>
-
+  <h3 class="title" *ngIf="(cartItems$|async).length">{{(cartItems$|async).length}} towards at cart </h3>
+  
   <!-- CART ITEMS -->
   <ion-list lines="none">
     <ion-item-sliding *ngFor="let item of cartItems$|async">
       <ion-item>
+        
         <app-cart-item [item]="item" (increase)="onIncrease(item)" (decrease)="onDecrease(item)"></app-cart-item>
+       
       </ion-item>
+      
       <ion-item-options side='end'>
         <ion-item-option (click)="removeFromCart(item)">
           <ion-icon name='trash-outline' size='large' color='danger'></ion-icon>

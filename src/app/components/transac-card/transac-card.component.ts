@@ -12,4 +12,7 @@ export class TransacCardComponent implements OnInit {
  
   ngOnInit() {}
 
+  //confirm Delete method to execute
+  
+
 }

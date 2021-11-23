@@ -1,7 +1,7 @@
 
 
   
-<ion-card > <!--*ngFor="let (create a loop for dynamic output of card)"-->
+<ion-card class="ion-margin"> <!--*ngFor="let (create a loop for dynamic output of card)"-->
     <ion-item-sliding >
       <ion-card-header color="light">
 
@@ -9,23 +9,23 @@
           <ion-thumbnail class="ion-margin-right">
             <img src="./assets/images/face1.jpg">
           </ion-thumbnail>
-          <ion-label  class="ion-padding-left">Product Label</ion-label>
+          <ion-label  class="ion-padding-left">Order Number label</ion-label>
         </ion-item>
         
         <!--Delete SLider Button Option-->
         <ion-item-options side="start">
-          <ion-item-option color="danger" >Delete</ion-item-option>
+          <ion-item-option color="danger" (click)="confirmDelete()">Delete</ion-item-option>
         </ion-item-options> 
       </ion-card-header>
     </ion-item-sliding>  
     
-    
+<!--     
       <ion-card-content class="ion-margin-top">
     
           <p>Lorem Ipsum</p>
           <p>Some content samples</p>
       
-      </ion-card-content>
+      </ion-card-content> -->
      
       
 </ion-card>

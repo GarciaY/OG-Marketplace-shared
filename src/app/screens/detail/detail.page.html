@@ -25,16 +25,26 @@
       </div>
     </div>
 
-    <div class="rates">
-      <app-badge icon="d-time-forward" text="30m"></app-badge>
-      <app-badge icon="star-outline" text="4.5"></app-badge>
-    </div>
 
     <div class="about">
       <h1>About</h1>
       <p>{{food.description}}</p>
     </div>
+    
+    <div class="rates">
+      <app-badge  text="1/4 kg"></app-badge>
+      <app-badge  text="1/2 kg"></app-badge>
+      <app-badge  text="1 kg"></app-badge>
+      <app-badge  text="2 kg"></app-badge> 
 
-    <shop-app-button (click)="addItemToCart()">Add to Cart</shop-app-button>
+      <!--Bill palagyan typescript gawing onclick app badge then mag iiba dapat display ni price depende sa kung ilang kilo bibilhin-->
+
+
+      <!-- icon="d-time-forward"
+      icon="star-outline" -->
+    </div>
+
+    <shop-app-button (click)="addItemToCart()">Add to Cart</shop-app-button> <!--BIll palagyan if else dapat di mag aadd hanggat di nakaka
+                                                                              select ng variety don sa app badge-->
   </div>
 </ion-content>
