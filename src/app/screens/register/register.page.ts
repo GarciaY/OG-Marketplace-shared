@@ -12,12 +12,16 @@ import {FormBuilder,
 })
 export class RegisterPage implements OnInit {
   
-  public barangay:string;
+  // public barangay:string;
 
   constructor(private fb: FormBuilder) { }
 
-  get fullname() {
-    return this.profileForm.get('fullname');
+  get firstname() {
+    return this.profileForm.get('firstname');
+  }
+
+  get lastname() {
+    return this.profileForm.get('lastname');
   }
 
   get email() {
@@ -28,8 +32,8 @@ export class RegisterPage implements OnInit {
     return this.profileForm.get('contactNumber');
   }
 
-  get street(){
-    return this.profileForm.get('street');
+  get address(){
+    return this.profileForm.get('address');
   }
 
   get password() {
@@ -38,7 +42,8 @@ export class RegisterPage implements OnInit {
 
 
   profileForm = this.fb.group({
-    fullname: ['', [Validators.required, Validators.maxLength(30)]],
+    firstname: ['', [Validators.required, Validators.maxLength(30)]],
+    lastname: ['', [Validators.required, Validators.maxLength(30)]],
 
     email: [
       '', 
@@ -56,7 +61,7 @@ export class RegisterPage implements OnInit {
     ],
 
     // address: this.fb.group({
-      street: [
+      address: [
         '', 
         [
           Validators.required, 
@@ -78,9 +83,13 @@ export class RegisterPage implements OnInit {
   
 
   public errorMessages = {
-    fullname: [
-      { type: 'required', message: 'Name is required' },
-      { type: 'maxlength', message: 'Name should not be longer than 30 characters' }
+    firstname: [
+      { type: 'required', message: 'First name is required' },
+      { type: 'maxlength', message: 'First name should not be longer than 30 characters' }
+    ],
+    lastname: [
+      { type: 'required', message: 'Last name is required' },
+      { type: 'maxlength', message: 'Last name should not be longer than 30 characters' }
     ],
     email: [
       { type: 'required', message: 'Email is required' },
@@ -92,9 +101,9 @@ export class RegisterPage implements OnInit {
       { type: 'pattern', message: 'Please enter a valid phone number' }
     ],
 
-    street: [
-      { type: 'required', message: 'Street name is required' },
-      { type: 'maxlength', message: 'Street name cant be longer than 30 characters'}
+    address: [
+      { type: 'required', message: 'Address is required' },
+      { type: 'maxlength', message: 'Your address cant be longer than 30 characters'}
     ],
 
     password: [
@@ -110,12 +119,12 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
   }
 
-  selectedBarangay(e){
+  // selectedBarangay(e){
 
-    console.log(e);
-    console.log(this.barangay);
+  //   console.log(e);
+  //   console.log(this.barangay);
 
-  }
+  // }
   onSubmit(){
     console.log(this.profileForm.value)
   }

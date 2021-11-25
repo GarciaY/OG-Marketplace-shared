@@ -10,19 +10,27 @@ export class ChangeNamePage implements OnInit {
 
   constructor(private fb: FormBuilder) { }
 
-  get fullname() {
-    return this.profileForm.get('fullname');
+  get firstname() {
+    return this.profileForm.get('firstname');
   }
 
+  get lastname() {
+    return this.profileForm.get('lastname');
+  }
   
   profileForm = this.fb.group({
-    fullname: ['', [Validators.required, Validators.maxLength(30)]],
+    firstname: ['', [Validators.required, Validators.maxLength(30)]],
+    lastname: ['', [Validators.required, Validators.maxLength(30)]],
   });
 
   public errorMessages = {
-    fullname: [
-      { type: 'required', message: 'Name is required' },
-      { type: 'maxlength', message: 'Name should not be longer than 30 characters' }
+    firstname: [
+      { type: 'required', message: 'First name is required' },
+      { type: 'maxlength', message: 'First name should not be longer than 30 characters' }
+    ],
+    lastname: [
+      { type: 'required', message: 'Last name is required' },
+      { type: 'maxlength', message: 'Last name should not be longer than 30 characters' }
     ],
   };
 

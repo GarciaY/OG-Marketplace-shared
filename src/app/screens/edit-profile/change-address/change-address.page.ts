@@ -7,17 +7,16 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ChangeAddressPage implements OnInit {
 
-  public barangay: string;
+  // public barangay: string;
 
   constructor(private fb: FormBuilder) { }
 
-  
-  get street(){
-    return this.profileForm.get('street');
+  get address(){
+    return this.profileForm.get('address');
   }
 
   profileForm = this.fb.group({
-    street: [
+    address: [
       '', 
       [
         Validators.required, 
@@ -27,9 +26,9 @@ export class ChangeAddressPage implements OnInit {
   });
 
   public errorMessages = {
-    street: [
-      { type: 'required', message: 'Street name is required' },
-      { type: 'maxlength', message: 'Street name cant be longer than 30 characters'}
+    address: [
+      { type: 'required', message: 'Address is required' },
+      { type: 'maxlength', message: 'Your address cant be longer than 30 characters'}
     ],
   };
 
@@ -37,12 +36,12 @@ export class ChangeAddressPage implements OnInit {
   }
 
   
-  selectedBarangay(e){
+  // selectedBarangay(e){
 
-    console.log(e);
-    console.log(this.barangay);
+  //   console.log(e);
+  //   console.log(this.barangay);
 
-  }
+  // }
   onSubmit(){
     console.log(this.profileForm.value)
   }

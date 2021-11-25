@@ -4,14 +4,25 @@
   <h3>Sign up to get started!</h3>
 
   <form [formGroup] = profileForm (ngSubmit)= "onSubmit()">
-    <app-input label="Full Name" inputmode="text" formControlName="fullname" ngDefaultControl></app-input>
-       <!--ErrorMessage.FullName-->
-       <div *ngFor="let error of errorMessages.fullname">
-        <ng-container *ngIf='fullname.hasError(error.type) && (fullname.dirty || fullname.touched)'>
-          <small class="error-message">{{error.message}}</small>
-        </ng-container>
+  
+     <app-input label="First Name" inputmode="text" formControlName="firstname" ngDefaultControl></app-input>
+      <!--ErrorMessage.FullName-->
+      <div *ngFor="let error of errorMessages.firstname">
+      <ng-container *ngIf='firstname.hasError(error.type) && (firstname.dirty || firstname.touched)'>
+        <small class="error-message">{{error.message}}</small>
+      </ng-container>
       </div>
 <br>
+
+      <app-input label="Last Name" inputmode="text" formControlName="lastname" ngDefaultControl></app-input>
+      <!--ErrorMessage.FullName-->
+      <div *ngFor="let error of errorMessages.lastname">
+      <ng-container *ngIf='lastname.hasError(error.type) && (lastname.dirty || lastname.touched)'>
+        <small class="error-message">{{error.message}}</small>
+      </ng-container>
+      </div>
+<br>
+
     <app-input label="Email" inputmode="email" formControlName="email" ngDefaultControl></app-input> 
       <!--ErrorMessage.Email-->
       <div *ngFor="let error of errorMessages.email">
@@ -28,8 +39,20 @@
       </ng-container>
     </div>
 
-    <!--Address-->
-    <ion-list >
+<br>
+    <app-input label="Address" inputmode="text" formControlName="address" ngDefaultControl></app-input>
+    <!--ErrorMessage.contactNumber-->
+    <div *ngFor="let error of errorMessages.address">
+      <ng-container *ngIf="address.hasError(error.type) && (address.dirty || address.touched)">
+        <small class="error-message">{{error.message}}</small>
+      </ng-container>
+    </div>
+
+
+
+
+    <!--Tabi lang muna dito in case-->
+    <!-- <ion-list >
       <ion-list-header>
         Address
       </ion-list-header>
@@ -48,14 +71,14 @@
         </ion-select>
       </ion-item>
 
-    </ion-list>
-    <app-input label="Street" formControlName="street" ngDefaultControl></app-input> <!-- -->
+    </ion-list> -->
+    <!-- <app-input label="Street" formControlName="street" ngDefaultControl></app-input> <!-- -->
     <!-- ErrorMessage.Street -->
-    <div *ngFor="let error of errorMessages.street">
+    <!-- <div *ngFor="let error of errorMessages.street">
       <ng-container *ngIf="street.hasError(error.type) && (street.dirty || street.touched)">
         <small class="error-message">{{error.message}}</small>
       </ng-container>
-    </div>
+    </div> --> 
    
     <!--Password-->
     <ion-list>

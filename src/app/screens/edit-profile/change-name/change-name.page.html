@@ -11,14 +11,23 @@
     
     <ion-label><p>Full name label</p></ion-label> <!--Dynamic user input typescript-->
     
-    <app-input label="New User Full Name"  inputmode="text" formControlName="fullname" ngDefaultControl></app-input>
+    <app-input label="New First Name"  inputmode="text" formControlName="firstname" ngDefaultControl></app-input>
     <!--ErrorMessage.Fullname-->
-    <div *ngFor="let error of errorMessages.fullname">
-      <ng-container *ngIf='fullname.hasError(error.type) && (fullname.dirty || fullname.touched)'>
-        <small class="error-message" class="ion-padding">{{error.message}}</small>
+    <div *ngFor="let error of errorMessages.firstname">
+      <ng-container *ngIf='firstname.hasError(error.type) && (firstname.dirty || firstname.touched)'>
+        <small class="error-message">{{error.message}}</small>
       </ng-container>
-  </div>
-    <br>
+      </div>
+<br>
+    <app-input label="New Last Name" inputmode="text" formControlName="lastname" ngDefaultControl></app-input>
+    <!--ErrorMessage.FullName-->
+    <div *ngFor="let error of errorMessages.lastname">
+    <ng-container *ngIf='lastname.hasError(error.type) && (lastname.dirty || lastname.touched)'>
+      <small class="error-message">{{error.message}}</small>
+    </ng-container>
+    </div>
+<br>
+
     <form-app-button>Update</form-app-button>
   </div>
     
