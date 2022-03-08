@@ -9,12 +9,12 @@
   <app-searchbar></app-searchbar>
 
   <!-- CATEGORY -->
-  <div class="categories">
+  <!-- <div class="categories">
     <app-category-item *ngFor="let item of categories" [item]="item"></app-category-item>
-  </div>
+  </div> -->
 
   <!-- PRODUCTS -->
-  <h1 class="list-header">Popular</h1>
+  <h1 class="list-header">All Products</h1>
   <div class="food-list">
     <app-food-card *ngFor="let food of foods" [item]="food" (clicked)="goToDetailPage(food.id)"></app-food-card>
   </div>

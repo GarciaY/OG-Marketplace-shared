@@ -25,9 +25,10 @@
   </div>
 
   <!-- CHECKOUT BUTTON -->
+  <div class="buttons">
   <shop-app-button *ngIf="(cartItems$|async).length">
     Total: <span><sup>₱</sup>{{totalAmount$|async|number:'1.2'}}</span>
   </shop-app-button>
   <shop-app-button routerLink="/confirm-order" *ngIf="(cartItems$|async).length">Checkout</shop-app-button> 
-   
+</div>
 </ion-content>

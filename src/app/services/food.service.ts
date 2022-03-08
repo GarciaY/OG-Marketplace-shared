@@ -54,6 +54,14 @@ export class FoodService {
         image: 'assets/images/foods/Sardines.png',
         description:
           'In addition to the freshet seafood, there are corn, cilantro, and tomatoes: their first became mayonnise, the second - cream, the third - spice tomato water.',
+      },
+      {
+        id: 7,
+        title: 'fat',
+        price: 13,
+        image: 'assets/images/foods/Sardines.png',
+        description:
+          'In addition to the freshet seafood, there are corn, cilantro, and tomatoes: their first became mayonnise, the second - cream, the third - spice tomato water.',
       }
       
     ];
